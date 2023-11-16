@@ -1,0 +1,13 @@
+@import './header';
+@import './general';
+@import './theme';
+@import './sidebar';
+
+@mixin header {
+  @include header-container;
+  @include container;
+}
+
+@mixin sidebar {
+  @include sidebar-container;
+}

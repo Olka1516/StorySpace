@@ -1,0 +1,75 @@
+@mixin header-container {
+  header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 120px;
+    height: 33px;
+  }
+
+  input {
+    padding: 3px 15px;
+    font-size: 18px;
+    width: 585px;
+    max-width: 585px;
+    height: 41px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 1px $grey_dark solid;
+    &:focus-visible {
+      outline: none;
+      border: 1px $grey_dark solid;
+      box-shadow: 1px 1px 8px $gold_shadow;
+    }
+  }
+
+  .search-button {
+    padding: 3px 24px;
+    width: 30px;
+    max-width: 30px;
+    height: 41px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-inline-start: 1px $grey_dark solid;
+    border-top: 1px $grey_dark solid;
+    border-bottom: 1px $grey_dark solid;
+    background-color: $milky;
+    background-image: url('@/assets/pictures/icons/search.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .content-items {
+    gap: 40px;
+    &button {
+      padding: 0.5rem 2rem;
+      transition: all 150ms linear;
+
+      &:hover {
+        transition: all 150ms ease-in;
+      }
+    }
+  }
+
+  .account-button {
+    border-radius: 50px;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+  }
+
+  .account-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
